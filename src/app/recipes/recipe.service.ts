@@ -1,12 +1,13 @@
 import { ShoppingListService } from './../shopping-list/shopping-list.service';
-import { EventEmitter, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Recipe } from './recipes.model';
 import { Ingredient } from '../shared/ingredient.model';
+import { Subject } from 'rxjs';
 
 @Injectable()
 export class RecipeService {
 
-    recipeSelected = new EventEmitter<Recipe>();
+    recipeSelected = new Subject<Recipe>();
     private recipes: Recipe[] = [
         new Recipe(
             'Tasty Schnitzel',
@@ -14,7 +15,7 @@ export class RecipeService {
             'https://upload.wikimedia.org/wikipedia/commons/7/72/Schnitzel.JPG',
             [
                 new Ingredient('Meat', 1),
-                new Ingredient('French Fires', 20)
+                new Ingredient('French Fries', 20)
             ]),
         new Recipe(
             'Big Fat Burger',
@@ -26,13 +27,17 @@ export class RecipeService {
             ])
     ];
 
-    constructor(private shoppingListService:ShoppingListService){}
+    constructor(private shoppingListService: ShoppingListService) { }
 
     getRecipes() {
         return this.recipes.slice();    //returns a copy of the array
     }
 
-    addIngredientsToShoppingList(ingredients:Ingredient[]){
+    addIngredientsToShoppingList(ingredients: Ingredient[]) {
         this.shoppingListService.addIngredients(ingredients);
+    }
+
+    getRecipe(index: number) {
+        return this.recipes[index];
     }
 }
