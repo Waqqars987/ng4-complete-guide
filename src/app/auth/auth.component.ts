@@ -1,4 +1,3 @@
-import { HeaderComponent } from './../header/header.component';
 import { AuthService, AuthResponseData } from './auth.service';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
