@@ -1,4 +1,3 @@
-import { LoggingService } from './../logging.service';
 import { FormsModule } from '@angular/forms';
 import { ShoppingEditComponent } from './shopping-edit/shopping-edit.component';
 import { ShoppingListComponent } from './shopping-list.component';
