@@ -28,8 +28,9 @@ export class RecipeService {
     //             new Ingredient('Meat', 1)
     //         ])
     // ];
-    private recipes:Recipe[]=[];
-    
+
+    private recipes: Recipe[] = [];
+
     constructor(private shoppingListService: ShoppingListService) { }
 
     setRecipes(recipes: Recipe[]) {

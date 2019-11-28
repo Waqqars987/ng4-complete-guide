@@ -1,4 +1,3 @@
-import { LoggingService } from './logging.service';
 import { CoreModule } from './core.module';
 import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
@@ -21,7 +20,6 @@ import { HeaderComponent } from './header/header.component';
     SharedModule,
     CoreModule
   ],
-  providers: [LoggingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

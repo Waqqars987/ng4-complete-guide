@@ -1,4 +1,5 @@
-<div class="row">
+<h3 *ngIf="isEmpty">Shopping List is Empty!</h3>
+<div class="row" *ngIf="!isEmpty">
     <div class="col-xs-10">
         <app-shopping-edit></app-shopping-edit>
         <hr>

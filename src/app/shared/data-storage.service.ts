@@ -16,7 +16,7 @@ export class DataStorageService {
             'https://ng-course-recipe-book-8a2ce.firebaseio.com/recipes.json',
             recipes
         ).subscribe(response => {
-            console.log(response);
+            //console.log(response);
             alert("Recipes Saved!");
         });
     }

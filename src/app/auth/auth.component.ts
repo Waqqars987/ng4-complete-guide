@@ -49,7 +49,7 @@ export class AuthComponent implements OnInit, OnDestroy {
         this.isLoading = false;
         this.router.navigate(['/recipes']);
       }, errorMessage => {
-        console.log(errorMessage);
+        //console.log(errorMessage);
         this.error = errorMessage;
         this.showErrorAlert(errorMessage);
         this.isLoading = false;
