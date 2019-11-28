@@ -1,4 +1,3 @@
-import { LoggingService } from './../logging.service';
 import { CommonModule } from '@angular/common';
 import { PlaceHolderDirective } from './placeholder/placeholder.directive';
 import { LoadingSpinnerComponenet } from './loading-spinner/loading-spinner.component';

@@ -8,12 +8,19 @@ import { DataStorageService } from '../shared/data-storage.service';
 })
 export class RecipesComponent implements OnInit {
 
+  isLoading = false;
+  
   constructor(private dataStorageService: DataStorageService) { }
 
   ngOnInit() {
 
     /* Loading All User's Recipes after Successful Login*/
-    this.dataStorageService.fetchRecipes().subscribe();
+    this.isLoading = true;
+    this.dataStorageService.fetchRecipes().subscribe(
+      () => {
+        this.isLoading = false;
+      }
+    );
   }
 
 }
