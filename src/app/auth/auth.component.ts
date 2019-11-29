@@ -20,7 +20,8 @@ export class AuthComponent implements OnInit, OnDestroy {
 
   @ViewChild(PlaceHolderDirective, { static: false }) alertHost: PlaceHolderDirective;
 
-  constructor(private authService: AuthService, private router: Router, private componentFactoryResolver: ComponentFactoryResolver) { }
+  constructor(private authService: AuthService, private router: Router, 
+    private componentFactoryResolver: ComponentFactoryResolver) { }
 
   ngOnInit() {
   }
