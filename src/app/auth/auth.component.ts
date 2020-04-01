@@ -18,7 +18,7 @@ export class AuthComponent implements OnInit, OnDestroy {
   error: string = null;
   private closeSub: Subscription;
 
-  @ViewChild(PlaceHolderDirective, { static: false }) alertHost: PlaceHolderDirective;
+  @ViewChild(PlaceHolderDirective) alertHost: PlaceHolderDirective;
 
   constructor(private authService: AuthService, private router: Router, 
     private componentFactoryResolver: ComponentFactoryResolver) { }

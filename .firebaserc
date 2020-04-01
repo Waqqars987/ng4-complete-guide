@@ -1,5 +1,11 @@
 {
-  "projects": {
-    "default": "ng-course-recipe-book-8a2ce"
+  "targets": {
+    "ng-course-recipe-book-8a2ce": {
+      "hosting": {
+        "ng4-complete-guide": [
+          "ng-course-recipe-book-8a2ce"
+        ]
+      }
+    }
   }
 }

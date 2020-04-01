@@ -12,7 +12,7 @@ import { NgForm } from '@angular/forms';
 
 export class ShoppingEditComponent implements OnInit, OnDestroy {
 
-  @ViewChild('f', { static: false }) slForm: NgForm;
+  @ViewChild('f') slForm: NgForm;
   subscription: Subscription;
   editMode = false;
   editedItemIndex: number;
